@@ -1,0 +1,172 @@
+[
+  {
+    "q": "O que é análise de dados?",
+    "o": ["Criar sites", "Transformar dados em informação útil", "Editar imagens", "Montar computadores"],
+    "a": 1
+  },
+  {
+    "q": "Qual é o principal objetivo da análise de dados?",
+    "o": ["Armazenar dados", "Tomar decisões melhores", "Apagar dados", "Criar sistemas"],
+    "a": 1
+  },
+  {
+    "q": "O que é um dataset?",
+    "o": ["Um gráfico", "Um conjunto de dados", "Um código", "Um software"],
+    "a": 1
+  },
+  {
+    "q": "Como os dados geralmente são organizados?",
+    "o": ["Em imagens", "Em linhas e colunas", "Em vídeos", "Em áudios"],
+    "a": 1
+  },
+  {
+    "q": "O que é um DataFrame?",
+    "o": ["Um gráfico", "Uma tabela de dados no Python", "Um banco físico", "Um código HTML"],
+    "a": 1
+  },
+  {
+    "q": "Qual ferramenta é muito usada em análise de dados?",
+    "o": ["Photoshop", "Python", "Word", "PowerPoint"],
+    "a": 1
+  },
+  {
+    "q": "Para que serve o Google Colab?",
+    "o": ["Editar imagens", "Programar em Python online", "Criar slides", "Fazer vídeos"],
+    "a": 1
+  },
+  {
+    "q": "O que é Kaggle?",
+    "o": ["Uma rede social", "Uma plataforma com datasets", "Um editor de texto", "Um sistema operacional"],
+    "a": 1
+  },
+  {
+    "q": "O que significa AED (Análise Exploratória de Dados)?",
+    "o": ["Apagar dados", "Entender e explorar os dados", "Criar banco de dados", "Programar sistemas"],
+    "a": 1
+  },
+  {
+    "q": "O que é um dashboard?",
+    "o": ["Um jogo", "Uma visualização de dados", "Um código", "Um banco físico"],
+    "a": 1
+  },
+  {
+    "q": "Qual o objetivo de um dashboard?",
+    "o": ["Confundir usuários", "Mostrar dados de forma clara", "Apagar dados", "Criar códigos"],
+    "a": 1
+  },
+  {
+    "q": "O que são insights?",
+    "o": ["Erros nos dados", "Informações úteis obtidas dos dados", "Códigos", "Gráficos aleatórios"],
+    "a": 1
+  },
+  {
+    "q": "O que faz um analista de dados?",
+    "o": ["Constrói casas", "Analisa dados e gera insights", "Desenha imagens", "Conserta computadores"],
+    "a": 1
+  },
+  {
+    "q": "O que faz um cientista de dados?",
+    "o": ["Cria modelos e previsões", "Edita vídeos", "Desenha gráficos simples", "Formata textos"],
+    "a": 0
+  },
+  {
+    "q": "O que faz um engenheiro de dados?",
+    "o": ["Analisa dados", "Prepara e organiza dados", "Cria apresentações", "Desenha imagens"],
+    "a": 1
+  },
+  {
+    "q": "O que é Big Data?",
+    "o": ["Poucos dados", "Grande volume de dados", "Dados apagados", "Dados pequenos"],
+    "a": 1
+  },
+  {
+    "q": "Por que os dados são importantes?",
+    "o": ["Não são importantes", "Ajudam empresas a tomar decisões", "Servem apenas para guardar", "Só ocupam espaço"],
+    "a": 1
+  },
+  {
+    "q": "O que significa tomar decisão baseada em dados?",
+    "o": ["Decidir no achismo", "Usar dados para decidir", "Ignorar informações", "Usar sorte"],
+    "a": 1
+  },
+  {
+    "q": "Qual etapa vem antes da análise?",
+    "o": ["Visualização", "Limpeza de dados", "Apresentação", "Dashboard"],
+    "a": 1
+  },
+  {
+    "q": "O que é limpeza de dados?",
+    "o": ["Apagar tudo", "Corrigir erros nos dados", "Criar gráficos", "Montar dashboards"],
+    "a": 1
+  },
+  {
+    "q": "O que é visualização de dados?",
+    "o": ["Apagar dados", "Transformar dados em gráficos", "Criar código", "Editar texto"],
+    "a": 1
+  },
+  {
+    "q": "Por que usar gráficos?",
+    "o": ["Para confundir", "Para facilitar o entendimento", "Para esconder dados", "Para apagar informações"],
+    "a": 1
+  },
+  {
+    "q": "O que é pipeline de dados?",
+    "o": ["Um gráfico", "Fluxo de processamento dos dados", "Um código HTML", "Um banco físico"],
+    "a": 1
+  },
+  {
+    "q": "O que acontece na coleta de dados?",
+    "o": ["Apagar dados", "Obter dados", "Criar gráficos", "Editar código"],
+    "a": 1
+  },
+  {
+    "q": "O que é tomada de decisão?",
+    "o": ["Escolher baseado em dados", "Escolher sem pensar", "Apagar dados", "Criar gráficos"],
+    "a": 0
+  },
+  {
+    "q": "Qual habilidade é importante para analista?",
+    "o": ["Curiosidade", "Ignorar dados", "Desenhar apenas", "Jogar videogame"],
+    "a": 0
+  },
+  {
+    "q": "O que significa pensamento analítico?",
+    "o": ["Pensar com lógica", "Ignorar problemas", "Desenhar gráficos", "Apagar dados"],
+    "a": 0
+  },
+  {
+    "q": "O que é LGPD?",
+    "o": ["Lei de proteção de dados", "Linguagem de programação", "Ferramenta de gráfico", "Sistema operacional"],
+    "a": 0
+  },
+  {
+    "q": "Por que a LGPD é importante?",
+    "o": ["Para proteger dados pessoais", "Para apagar dados", "Para criar gráficos", "Para programar"],
+    "a": 0
+  },
+  {
+    "q": "O que significa ética em dados?",
+    "o": ["Usar dados corretamente", "Ignorar regras", "Apagar dados", "Criar erros"],
+    "a": 0
+  },
+  {
+    "q": "Qual tendência atual no mundo?",
+    "o": ["Menos dados", "Crescimento de dados", "Fim da tecnologia", "Parar a internet"],
+    "a": 1
+  },
+  {
+    "q": "O que a internet gera?",
+    "o": ["Nada", "Grande quantidade de dados", "Somente vídeos", "Somente imagens"],
+    "a": 1
+  },
+  {
+    "q": "Por que aprender análise de dados?",
+    "o": ["Porque não serve para nada", "Porque há oportunidades no mercado", "Para perder tempo", "Para apagar dados"],
+    "a": 1
+  },
+  {
+    "q": "Como um dashboard ajuda empresas?",
+    "o": ["Confundindo dados", "Facilitando decisões", "Apagando dados", "Criando erros"],
+    "a": 1
+  }
+]
