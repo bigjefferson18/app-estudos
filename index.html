@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>App Estudos PRO</title>
+<link rel="manifest" href="manifest.json">
+<style>
+body{font-family:Arial;margin:0;background:#0f172a;color:#fff}
+.container{max-width:900px;margin:auto;padding:20px}
+.card{background:#1e293b;padding:20px;border-radius:12px;margin-bottom:15px}
+button{width:100%;padding:12px;margin:5px 0;border:none;border-radius:8px;background:#3b82f6;color:#fff}
+.correct{background:#22c55e!important}
+.wrong{background:#ef4444!important}
+.bar{height:10px;background:#22c55e;width:0%}
+input{width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:none}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>📚 App Estudos PRO</h1>
+
+<div class="card" id="loginBox">
+<input id="user" placeholder="Digite seu nome">
+<button onclick="login()">Entrar</button>
+</div>
+
+<div id="app" style="display:none">
+<div class="card">
+<div id="timer">⏱️ 0s</div>
+<div id="score">0</div>
+<div style="background:#334155"><div class="bar" id="bar"></div></div>
+</div>
+
+<div id="quiz"></div>
+
+<div class="card">
+<h3>🏆 Ranking</h3>
+<ul id="ranking"></ul>
+</div>
+
+<div class="card">
+<h3>📊 Desempenho</h3>
+<p id="stats"></p>
+</div>
+
+<button onclick="restart()">Reiniciar</button>
+</div>
+</div>
+
+<script>
+let user="";
+let questions=[];
+
+// 🔥 CARREGAR PERGUNTAS VIA JSON
+async function loadQuestions(){
+ try{
+  const res = await fetch('questions.json');
+  questions = await res.json();
+ }catch(e){
+  console.error('Erro ao carregar JSON', e);
+ }
+}
+
+let score=0,answered=0,time=0,timer;
+
+async function login(){
+ user=document.getElementById("user").value;
+ if(!user) return;
+ document.getElementById("loginBox").style.display="none";
+ document.getElementById("app").style.display="block";
+ await loadQuestions();
+ start();
+}
+
+function start(){ load(); startTimer(); }
+
+function load(){
+ const quiz=document.getElementById("quiz"); quiz.innerHTML="";
+ questions.sort(()=>Math.random()-0.5);
+
+ questions.forEach((q)=>{
+  const div=document.createElement("div"); div.className="card";
+  div.innerHTML=`<h3>${q.q}</h3>`;
+
+  q.o.forEach((opt,idx)=>{
+   const btn=document.createElement("button"); btn.innerText=opt;
+   btn.onclick=()=>{
+    if(btn.disabled)return;
+    if(idx===q.a){btn.classList.add("correct");score++;}
+    else btn.classList.add("wrong");
+
+    Array.from(div.children).forEach(el=>{if(el.tagName==='BUTTON')el.disabled=true});
+    answered++; update();
+   };
+   div.appendChild(btn);
+  });
+
+  quiz.appendChild(div);
+ });
+}
+
+function update(){
+ document.getElementById("score").innerText=`${score}/${questions.length}`;
+ document.getElementById("bar").style.width=(answered/questions.length*100)+"%";
+ if(answered===questions.length){
+  clearInterval(timer);
+  saveRanking();
+  updateStats();
+ }
+}
+
+function startTimer(){
+ timer=setInterval(()=>{
+  time++;
+  document.getElementById("timer").innerText="⏱️ "+time+"s";
+ },1000);
+}
+
+function restart(){score=0;answered=0;time=0;clearInterval(timer);start();}
+
+function saveRanking(){
+ let rank=JSON.parse(localStorage.getItem("rank"))||[];
+ rank.push({user,score});
+ rank.sort((a,b)=>b.score-a.score);
+ localStorage.setItem("rank",JSON.stringify(rank));
+ showRanking();
+}
+
+function showRanking(){
+ let rank=JSON.parse(localStorage.getItem("rank"))||[];
+ const ul=document.getElementById("ranking"); ul.innerHTML="";
+ rank.slice(0,5).forEach(r=>{
+  const li=document.createElement("li");
+  li.innerText=`${r.user} - ${r.score}`;
+  ul.appendChild(li);
+ });
+}
+
+function updateStats(){
+ document.getElementById("stats").innerText=`Tempo: ${time}s | Acertos: ${score}`;
+}
+
+showRanking();
+</script>
+
+</body>
+</html>
